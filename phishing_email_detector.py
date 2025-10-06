@@ -1,8 +1,8 @@
 # FILE NAME - phishing_email_detector.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Emma Edwards
+# DATE: 10/5/25
+# BRIEF DESCRIPTION:  phishing email detector project
 
 
 
@@ -15,7 +15,23 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+subject = input("Enter the email subject line: ")
 
+subject_lower = subject.lower()
+
+print("SECURITY ASSESSMENT: ")
+
+if "urgent" in subject_lower or "immediate action required" in subject_lower:
+    print("HIGH RISK: Possible phishing attempt.")
+elif "win" in subject_lower or "free" in subject_lower:
+    print("MEDIUM RISK: Suspicious offer detected.")
+elif "password reset" in subject_lower:
+    print("LOW RISK: Verify legitimacy with sender.")
+else:
+    print("No phishing indicators detected.")
+
+print("------------------------")
+print(f'Analyzed subject: "{subject}"')
 
 
 
@@ -78,7 +94,7 @@ Analyzed subject: "Did you request a password reset?"
 
 1. Was using `in` difficult or was it natural?
 
-
+It was a little difficult
 
 
 
@@ -99,7 +115,7 @@ of the appropriate response. Only choose one of the following:
 
 [ ] I did not use AI at all for this lab.
 [ ] I wrote the initial draft of the software but had AI help me make it better.
-[ ] I fed the lab description to AI and had it generate a response but I modified it.
+[x] I fed the lab description to AI and had it generate a response but I modified it.
 [ ] AI created the entire program for me.
 
 
@@ -110,7 +126,7 @@ like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Go
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
 [ ] I understand very little about this lab.
-[ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
+[x] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
